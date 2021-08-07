@@ -8,6 +8,7 @@ finish-args:
   - --share=network
   - --share=ipc
   - --socket=fallback-x11
+  - --socket=system-bus
   - --socket=wayland
   - --device=dri
   - --filesystem=home
@@ -28,5 +29,5 @@ modules:
       - install -Dm755 target/release/dragit /app/bin/dragit
     sources:
       - type: archive
-        url: https://github.com/sireliah/dragit/releases/download/v0.6.0/vendored_packages_v0.6.0.tar.gz
-        sha256: 64b39315295391fd0585da4cc6eb95d0efa93acf9a2faa4fa0d1623448a70f0e
+        url: https://github.com/sireliah/dragit/releases/download/v0.6.1/vendored_packages_v0.6.1.tar.gz
+        sha256: 8a8e3bb62a8b21a597d4ef36f04793cd88d149475b67276708816f9076a4de64

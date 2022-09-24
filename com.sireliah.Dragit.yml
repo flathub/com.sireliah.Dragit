@@ -29,5 +29,5 @@ modules:
       - install -Dm755 target/release/dragit /app/bin/dragit
     sources:
       - type: archive
-        url: https://github.com/sireliah/dragit/releases/download/v0.6.3/vendored_packages_v0.6.3.tar.gz
-        sha256: 0e9ddbec2f0fe378aa041e8703eb1b3eee24ba38dfe6048d09c7ad050125925c
+        url: https://github.com/sireliah/dragit/releases/download/v0.7.0/vendored_packages_v0.7.0.tar.gz
+        sha256: b8320441dd3c8abb00a7b07d03e42a341801f072f859ca5139a55a6fa0fd3ef8

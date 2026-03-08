@@ -1,6 +1,6 @@
 app-id: com.sireliah.Dragit
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -29,5 +29,5 @@ modules:
       - install -Dm755 target/release/dragit /app/bin/dragit
     sources:
       - type: archive
-        url: https://github.com/sireliah/dragit/releases/download/v0.7.1/vendored_packages_v0.7.1.tar.gz
-        sha256: 08c58130258e94632eb7056703046e8c3e62c6afaac25d661bdad477a6182274
+        url: https://github.com/sireliah/dragit/releases/download/v0.7.2/vendored_packages_v0.7.2.tar.gz
+        sha256: 32becdc2343b1d6fb950cc2983710f9630ab6be1b94352f8656616f4ce9d5e51

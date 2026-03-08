@@ -4,6 +4,9 @@ runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
+command: dragit
+build-options:
+  append-path: "/usr/lib/sdk/rust-stable/bin"
 finish-args:
   - --share=network
   - --share=ipc
@@ -12,15 +15,12 @@ finish-args:
   - --device=dri
   - --filesystem=home
   - --system-talk-name=org.fedoraproject.FirewallD1
-build-options:
-  append-path: "/usr/lib/sdk/rust-stable/bin"
-command: dragit
+cleanup:
+  - "/include"
+  - "*.a"
 modules:
   - name: dragit
     buildsystem: simple
-    cleanup:
-      - "/include"
-      - "*.a"
     build-commands:
       - install -Dm644 static/logo_icon_t.svg /app/share/icons/hicolor/scalable/apps/com.sireliah.Dragit.svg
       - install -Dm644 dragit.desktop /app/share/applications/com.sireliah.Dragit.desktop

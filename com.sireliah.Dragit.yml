@@ -19,6 +19,25 @@ cleanup:
   - "/include"
   - "*.a"
 modules:
+  - name: protobuf
+    buildsystem: cmake-ninja
+    builddir: true
+    config-opts:
+      - -Dprotobuf_BUILD_TESTS=OFF
+    sources:
+      - type: git
+        url: https://github.com/protocolbuffers/protobuf.git
+        commit: 4b0c3aacf0657fbf38253b38918d3358dd4319ec
+        tag: v34.1
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/protocolbuffers/protobuf/releases/latest
+          tag-query: .tag_name
+          timestamp-query: .published_at
+          version-query: $tag | sub("^[vV]"; "")
+    cleanup:
+      - "*"
+
   - name: dragit
     buildsystem: simple
     build-commands:

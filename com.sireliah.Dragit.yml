@@ -19,6 +19,7 @@ cleanup:
   - /include
   - '*.a'
 modules:
+  # Protoc binary is no longer provided through the vendor, so we install it here explicitly
   - name: protobuf
     buildsystem: cmake-ninja
     builddir: true

@@ -1,12 +1,12 @@
 app-id: com.sireliah.Dragit
 runtime: org.freedesktop.Platform
-runtime-version: "25.08"
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
 command: dragit
 build-options:
-  append-path: "/usr/lib/sdk/rust-stable/bin"
+  append-path: /usr/lib/sdk/rust-stable/bin
 finish-args:
   - --share=network
   - --share=ipc
@@ -16,9 +16,10 @@ finish-args:
   - --filesystem=home
   - --system-talk-name=org.fedoraproject.FirewallD1
 cleanup:
-  - "/include"
-  - "*.a"
+  - /include
+  - '*.a'
 modules:
+  # Protoc binary is no longer provided through the vendor, so we install it here explicitly
   - name: protobuf
     buildsystem: cmake-ninja
     builddir: true
@@ -27,8 +28,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/protocolbuffers/protobuf.git
-        commit: 4b0c3aacf0657fbf38253b38918d3358dd4319ec
-        tag: v34.1
+        commit: e59364c38e10de3686a3305ff11fbfc59a10dbd8
+        tag: v35.0
         x-checker-data:
           type: json
           url: https://api.github.com/repos/protocolbuffers/protobuf/releases/latest
@@ -36,7 +37,7 @@ modules:
           timestamp-query: .published_at
           version-query: $tag | sub("^[vV]"; "")
     cleanup:
-      - "*"
+      - '*'
 
   - name: dragit
     buildsystem: simple

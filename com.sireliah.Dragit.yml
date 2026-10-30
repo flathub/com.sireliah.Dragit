@@ -28,8 +28,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/protocolbuffers/protobuf.git
-        commit: e59364c38e10de3686a3305ff11fbfc59a10dbd8
-        tag: v35.0
+        commit: 2c74169b34066ceb8ddb6b882fcb3fb32d737a55
+        tag: v36.2
         x-checker-data:
           type: json
           url: https://api.github.com/repos/protocolbuffers/protobuf/releases/latest
@@ -49,5 +49,6 @@ modules:
       - install -Dm755 target/release/dragit /app/bin/dragit
     sources:
       - type: archive
-        url: https://github.com/sireliah/dragit/releases/download/v1.0.0/vendored_packages_v1.0.0.tar.gz
+        url: 
+          https://github.com/sireliah/dragit/releases/download/v1.0.0/vendored_packages_v1.0.0.tar.gz
         sha256: 4933cc5d2b142e7d6b776113480cdd3c73d400c7d362368f0683652774a25f00
